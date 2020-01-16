@@ -4,8 +4,8 @@
   "description": "",
   "main": "index.js",
   "scripts": {
-    "dev": "webpack --mode development --watch ./back/cashstatus/frontend/src/index.js  --output ./back/cashstatus/frontend/static/frontend/main.js",
-    "build": "webpack --mode production ./back/cashstatus/frontend/src/index.js  --output ./back/cashstatus/frontend/static/frontend/main.js"
+    "dev": "webpack --mode development --watch ./fullstack/cashstatus/frontend/src/index.js  --output ./fullstack/cashstatus/frontend/static/frontend/main.js",
+    "build": "webpack --mode production ./fullstack/cashstatus/frontend/src/index.js  --output ./fullstack/cashstatus/frontend/static/frontend/main.js"
   },
   "repository": {
     "type": "git",
