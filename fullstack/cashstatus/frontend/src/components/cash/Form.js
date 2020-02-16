@@ -57,15 +57,18 @@ export class Form extends Component {
                         value={target_nation}
                     />
                 </div>
-                <div className="form-group">
+                <div className="form-row">
                     <label>Data date</label>
+                    <div class="input-group">
                     <input
                         className="form-control"
-                        type="date"
+                        type="datetime-local"
                         name="Data_date"
                         onChange={this.onChange}
                         value={Data_date}
                     />
+                    <span class="input-group-text" >now</span>
+                    </div>
                 </div>
                 <div className="form-group">
                     <label>rate</label>

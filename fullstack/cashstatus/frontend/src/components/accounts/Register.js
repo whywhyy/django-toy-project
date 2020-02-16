@@ -24,7 +24,7 @@ export class Register extends Component {
         const { username, email, password, password2 } = this.state;
         if (password != password2){
             this.props.createMessage({ passwordNotMatch: 'Password do not match'});
-        } else{
+        }  else{
             const newUser = {
                 username,
                 password,
@@ -51,14 +51,17 @@ export class Register extends Component {
                         </div>
                     </div>
                     <div className="row">
-                        <div className="col-md-3 ">
+                         <div className="col-md-1 "></div>
+                        <div className="col-md-2 ">
+                        <span className="text-danger align-middle"> * </span>
                             <label htmlFor="name">Name</label>
                         </div>
                         <div className="col-md-6">
                             <div className="form-group">
                                 <div className="input-group mb-2 mr-sm-2 mb-sm-0">
-                                    <div className="input-group-addon"   ><i className="fa fa-user"></i></div>
+                                <span className="input-group-text"> <i className="fa fa-user"></i> </span>
                                     <input
+                                        placeholder="Username"
                                         type="text"
                                         name="username"
                                         className="form-control"
@@ -77,14 +80,16 @@ export class Register extends Component {
                         </div>
                     </div>
                     <div className="row">
-                        <div className="col-md-3 ">
-                            <label htmlFor="email">E-Mail Address</label>
+                        <div className="col-md-1 "></div>
+                        <div className="col-md-2 ">
+                            <label htmlFor="email">E-Mail</label>
                         </div>
                         <div className="col-md-6">
                             <div className="form-group">
                                 <div className="input-group mb-2 mr-sm-2 mb-sm-0">
-                                    <div className="input-group-addon"   ><i className="fa fa-at"></i></div>
+                                    <span className="input-group-text"> <i className="fa fa-at"></i> </span>
                                     <input
+                                        placeholder="UserEmail@domain.com"
                                         type="email"
                                         name="email"
                                         className="form-control"
@@ -103,14 +108,17 @@ export class Register extends Component {
                         </div>
                     </div>
                     <div className="row">
-                        <div className="col-md-3 ">
+                        <div className="col-md-1 "></div>
+                        <div className="col-md-2 ">
+                                <span className="text-danger align-middle"> * </span>
                             <label htmlFor="password">Password</label>
                         </div>
                         <div className="col-md-6">
                             <div className="form-group has-danger">
                                 <div className="input-group mb-2 mr-sm-2 mb-sm-0">
-                                    <div className="input-group-addon"   ><i className="fa fa-key"></i></div>
+                                    <span className="input-group-text"> <i className="fa fa-key"></i> </span>
                                     <input
+                                        placeholder="Password"
                                         type="password"
                                         name="password"
                                         className="form-control"
@@ -122,23 +130,21 @@ export class Register extends Component {
                         </div>
                         <div className="col-md-3">
                             <div className="form-control-feedback">
-                                <span className="text-danger align-middle">
-                                    <i className="fa fa-close"> Example Error Message</i>
-                                </span>
                             </div>
                         </div>
                     </div>
                     <div className="row">
-                        <div className="col-md-3 ">
+                        <div className="col-md-1 "></div>
+                        <div className="col-md-2 ">
+                            <span className="text-danger align-middle"> * </span>
                             <label htmlFor="password">Confirm Password</label>
                         </div>
                         <div className="col-md-6">
                             <div className="form-group">
                                 <div className="input-group mb-2 mr-sm-2 mb-sm-0">
-                                    <div className="input-group-addon"   >
-                                        <i className="fa fa-repeat"></i>
-                                    </div>
+                                <span className="input-group-text"> <i className="fa fa-repeat"></i> </span>
                                     <input
+                                        placeholder="Password"
                                         type="password"
                                         name="password2"
                                         className="form-control"

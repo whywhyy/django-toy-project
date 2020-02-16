@@ -7,25 +7,29 @@ BE : Django DRF
 
 ## Installation
 
-### git clone
+### Git clone
 ```bash
 git clone https://github.com/whywhyy/django-toy-project
 ```
-### Node Js
-```bash
-cd django-toy-project-dev
-npm install
-npm run dev
-```
 
 ### Django
- Open the terminal
 ```bash
 cd ./fullstack/cashstatus
 python -m pip install -r requirements.txt
 python manage.py migrate
 python manage.py runserver
 ```
+
+
+### Node Js 
+Open New terminal
+
+```bash
+cd django-toy-project
+npm install
+npm run dev
+```
+
 
 ### Open an Internet Browser
 http://localhost:8000/
