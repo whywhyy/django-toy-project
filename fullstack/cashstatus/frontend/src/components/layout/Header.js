@@ -39,7 +39,7 @@ export class Header extends Component {
         return (
 <nav className="navbar navbar-expand-sm navbar-light bg-light">
   <div className="container">
-  <a><Link to="/" className="navbar-brand">LOGO</Link></a>
+    <Link to="/" className="navbar-brand">LOGO</Link>
   <button className="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarNav" aria-controls="navbarNav" aria-expanded="false" aria-label="Toggle navigation">
     <span className="navbar-toggler-icon"></span>
   </button>

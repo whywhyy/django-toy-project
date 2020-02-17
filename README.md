@@ -41,5 +41,9 @@ http://localhost:8000/
 
 
 
-## 앞으로 남은개발 사항
-@@ 서비스 구체화 
+## ToDo List
+__CASH MY Page__
+- ADD My Cash Chart
+- ADD Function Data_date Button  
+- ADD Current exchange rate viewer 
+- Outline Design

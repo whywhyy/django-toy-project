@@ -39,27 +39,34 @@ export class Form extends Component {
             <form onSubmit ={this.onSubmit}>
                 <div className="form-group">
                     <label>base nation</label>
-                    <input
-                        className="form-control"
-                        type="text"
-                        name="base_nation"
-                        onChange={this.onChange}
-                        value={base_nation}
-                    />
+                    <select className="custom-select" 
+                            name="base_nation"
+                            value={base_nation} 
+                            onChange={this.onChange}
+                    >
+                        <option value="" disabled  >Choose..</option>
+                        <option value="KRW">KRW</option>
+                        <option value="USA">USA</option>
+                        <option value="EUR">EUR</option>
+                    </select>
+
                 </div>
                 <div className="form-group">
                     <label>target nation</label>
-                    <input
-                        className="form-control"
-                        type="text"
-                        name="target_nation"
-                        onChange={this.onChange}
-                        value={target_nation}
-                    />
+                    <select className="custom-select" 
+                            name="target_nation"
+                            value={target_nation} 
+                            onChange={this.onChange}
+                    >
+                        <option value="" disabled>Choose..</option>
+                        <option value="KRW">KRW</option>
+                        <option value="USA">USA</option>
+                        <option value="EUR">EUR</option>
+                    </select>
                 </div>
                 <div className="form-row">
                     <label>Data date</label>
-                    <div class="input-group">
+                    <div className="input-group">
                     <input
                         className="form-control"
                         type="datetime-local"
@@ -67,12 +74,15 @@ export class Form extends Component {
                         onChange={this.onChange}
                         value={Data_date}
                     />
-                    <span class="input-group-text" >now</span>
+                    <div className="input-group-append" >
+                         <button className="btn btn-outline-secondary" type="button">Button</button>
+                    </div>
                     </div>
                 </div>
                 <div className="form-group">
                     <label>rate</label>
                     <input
+                        placeholder="input number"
                         className="form-control"
                         type="number"
                         name="rate"
