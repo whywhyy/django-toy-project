@@ -39,14 +39,16 @@ export class Login extends Component {
                         </div>
                     </div>
                     <div className="row">
-                        <div className="col-md-3 ">
+                        <div className="col-md-1 "></div>
+                        <div className="col-md-2 ">
                             <label htmlFor="name">Name</label>
                         </div>
                         <div className="col-md-6">
                             <div className="form-group">
                                 <div className="input-group mb-2 mr-sm-2 mb-sm-0">
-                                    <div className="input-group-addon"  ><i className="fa fa-user"></i></div>
+                                    <span className="input-group-text"> <i className="fa fa-user"></i> </span>
                                     <input
+                                        placeholder="Username"
                                         type="text"
                                         name="username"
                                         className="form-control"
@@ -65,14 +67,16 @@ export class Login extends Component {
                         </div>
                     </div>
                     <div className="row">
-                        <div className="col-md-3 ">
+                        <div className="col-md-1 "></div>
+                        <div className="col-md-2 ">
                             <label htmlFor="password">Password</label>
                         </div>
                         <div className="col-md-6">
                             <div className="form-group has-danger">
                                 <div className="input-group mb-2 mr-sm-2 mb-sm-0">
-                                    <div className="input-group-addon"  ><i className="fa fa-key"></i></div>
+                                    <span className="input-group-text"> <i className="fa fa-key"></i> </span>
                                     <input
+                                        placeholder="password"
                                         type="password"
                                         name="password"
                                         className="form-control"
