@@ -1,7 +1,9 @@
 import React, { Component } from 'react';
 import { connect } from 'react-redux';
 import PropTypes from 'prop-types';
-import { getCash, deleteCash } from '../../actions/cash'
+import { getCash, deleteCash } from '../../actions/cash';
+import {Bar, Line, Pie} from 'react-chartjs-2';
+
 
 export class Cash extends Component {
     static propTypes ={
@@ -13,8 +15,17 @@ export class Cash extends Component {
     componentDidMount(){
         this.props.getCash();
     }
-
     render() {
+        const chartdata = {
+            labels:this.props.cash.map(cash=>(cash.Data_date)),
+            datasets:[
+                {
+                    label:'Rate',
+                    data:this.props.cash.map(cash=>(cash.rate)),
+                    backgroundColor:[]
+                }
+            ]
+        }
         return (
             <div>
                 <h2>Cash List</h2>
@@ -44,7 +55,24 @@ export class Cash extends Component {
                         )) }
                     </tbody>
                 </table>
+
+                <Bar
+                    data={chartdata}
+                    width={10}
+                    height={5}
+                    options={{
+                        title:{
+                            display:true,
+                            text:'Cash Status'
+                        },
+                        legend:{
+                            display:true,
+                            position:'right'
+                        }
+                     }}
+                    />
             </div>
+
         );
     }
 }
